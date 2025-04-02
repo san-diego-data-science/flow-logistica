@@ -2,7 +2,6 @@ title: "Flow Logistica Integrata di Roberto Gentile"
 description: "Express deliveries in the north of Italy."
 url: "http://flowlogistica.it"
 author: "Roberto Gentile"
-theme: "default"
 markdown: kramdown
 permalink: pretty
 colors:
