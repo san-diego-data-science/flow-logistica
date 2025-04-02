@@ -1,93 +1,91 @@
-/* 
-This file contains styles for the skeleton framework, providing a responsive grid system. 
-*/
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+/* -----------------------------------*/
+/* ----- 960px wide fancy grid! ----- */
+/* -----------------------------------*/
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* by tim o'brien, t413.com
+ * based on getskeleton.com
+ */
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
 
-.col {
-    padding: 0 15px;
-    box-sizing: border-box;
-}
+/* ----- base grid----- */
 
-.col-1 {
-    flex: 0 0 8.33%;
-    max-width: 8.33%;
-}
+.container               { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+.container .column       { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+.row                     { margin-bottom: 20px; }
 
-.col-2 {
-    flex: 0 0 16.66%;
-    max-width: 16.66%;
-}
+.container .small.column { width: 300px; }
+.container .half.column  { width: 460px; }
+.container .big.column   { width: 620px; }
+.container .full.column  { width: 940px; }
 
-.col-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-}
 
-.col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-}
+/* ----- Tablet (Portrait) -- 768px ----- */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container               { width: 768px; }
 
-.col-5 {
-    flex: 0 0 41.66%;
-    max-width: 41.66%;
-}
+    .container .small.column { width: 236px; }
+    .container .half.column  { width: 364px; }
+    .container .big.column   { width: 488px; }
+    .container .full.column  { width: 748px; }
+  }
 
-.col-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
 
-.col-7 {
-    flex: 0 0 58.33%;
-    max-width: 58.33%;
-}
+/* ----- Mobile (Portrait) ----- */
+  @media only screen and (max-width: 767px) {
+    .container                { width:  96%; }
+    .container .column        { margin:  1%; }
 
-.col-8 {
-    flex: 0 0 66.66%;
-    max-width: 66.66%;
-}
+    .container .small.column { width: 48%; }
+    .container .half.column  { width: 48%; }
+    .container .big.column   { width: 98%; }
+    .container .full.column  { width: 98%; }
+  }
 
-.col-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-}
 
-.col-10 {
-    flex: 0 0 83.33%;
-    max-width: 83.33%;
-}
+/* ----- Mobile (Landscape) -- 480px ----- */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container                { width:  92%; }
+    .container .column        { margin:  2%; }
 
-.col-11 {
-    flex: 0 0 91.66%;
-    max-width: 91.66%;
-}
+    .container .small.column { width: 46%; }
+    .container .half.column  { width: 46%; }
+    .container .big.column   { width: 96%; }
+    .container .full.column  { width: 96%; }
+  }
 
-.col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
 
-@media (max-width: 768px) {
-    .col {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
+
+/* ----- Clearing ----- */
+
+  /* Self Clearing Goodness */
+  .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+  /* Use clearfix class on parent to clear nested columns,
+  or wrap each row of columns in a <div class="row"> */
+  .clearfix:before,
+  .clearfix:after,
+  .row:before,
+  .row:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .row:after,
+  .clearfix:after {
+    clear: both; }
+  .row,
+  .clearfix {
+    zoom: 1; }
+
+  /* You can also use a <br class="clear" /> to clear columns */
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
