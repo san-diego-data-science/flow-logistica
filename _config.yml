@@ -1,0 +1,14 @@
+title: "Flow Logistica Integrata di Roberto Gentile"
+description: "Express deliveries in the north of Italy."
+url: "http://flowlogistica.it"
+author: "Roberto Gentile"
+theme: "default"
+markdown: kramdown
+permalink: pretty
+colors:
+  primary: "#3498db"
+  secondary: "#2ecc71"
+  accent: "#e74c3c"
+  background: "#ffffff"
+  text: "#333333"
+google_analytics: "UA-XXXXXXXXX-X"  # Replace with your Google Analytics tracking ID if needed.

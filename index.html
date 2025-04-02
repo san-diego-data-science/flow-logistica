@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Logistica Integrata di Roberto Gentile</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    {% include header.html %}
+
+    <main>
+        <section id="intro">
+            {% include_relative _posts/2024-01-01-intro.md %}
+        </section>
+        <section id="services">
+            {% include_relative _posts/2024-01-02-services.md %}
+        </section>
+        <section id="areas">
+            {% include_relative _posts/2024-01-03-areas.md %}
+        </section>
+        <section id="about">
+            {% include_relative _posts/2024-01-04-about.md %}
+        </section>
+        <section id="contact">
+            {% include_relative _posts/2024-01-05-contact.md %}
+        </section>
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>
